@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="style.css"/>
+		<title>Activities Home page</title>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ 		<script type="text/javascript" src="jquery.js"></script>
+	</head>
+	<body>
+		<div id="content">
+			<div id="header">
+				<div>
+					<img src="images/logo.jpg" alt="logo" width="80px" id="logo">
+					<h1>Activities</h1>
+					<div id="searchbar">
+						<form > 
+							<input type="text" name="query" id="query" size="40" value=""> 
+							<input type="submit" value="Search"> 
+							<input type="hidden" name="search" value="1"> 
+						</form> 
+					</div>
+					<div class="account">
+						<div><h2>Hi!</h2><h2 class="account_name"></h2></div>
+					</div>
+				</div>
+				<div id="hor_sep"></div>
+			</div>
+			<div id="container">
+				<div id="post">
+					<!--choose date from calendar-->
+					<div id="date">date:</div>
+					<input type="text" id="dob">
+					<div id="calendar"><img src="images/calendar.png" onclick="showChooser(this, 'dob', 'chooserSpan', 1990, 2013, 'Y-m-d', false);"/></div>
+					<div id="chooserSpan" class="dateChooser" style="display: none; visibility: hidden; width: 160px;">
+</div>
+					<div >
+						<form >
+							<input type="text" name="contact_info" value="email address/phone number/facebook" id="contactInfo">
+						</form>
+					</div>
+					<div id="tagsOfActivities">
+						<form >
+							<select name="tagsOfActivities">
+								<option value="Arts/Entertainment" selected>Arts/Entertainment</option>
+								<option value="Atheletics/Recreation">Atheletics/Recreation</option>
+								<option value="Parties/Groups" >Parties/Groups</option>
+							</select>
+						</form>
+					</div>
+					<div id="CampusOrNot">
+						<form >
+							<input type="radio" name="group" value="campus" checked="checked">Campus
+							<input type="radio" name="group" value="personal">Personal
+						</form>
+					</div>
+					<div id="post_Content">
+						<form action="">
+							<input type="text" name="post_c" id="post_c">
+						</form>
+					</div>
+					<div class="button"><button id="post_btn">Post</button></div>
+				</div>
+				<div id="activitiesList">
+					<div id="button_r">
+						<!--group by button-->
+							<button>Campus</button>
+							<button>Personal</button>
+							<button>All</button>
+											</div>
+					<!--group by tags. They are on the left.-->
+					<div id="tags_l">
+						<table>
+							<ul><li>Arts/Entertainment</li></ul>
+							<ul><li>Athletics/Recreation</li></ul>
+							<ul><li>Parties/Groups</li></ul>
+						</table>
+					</div>
+					<div id="activitiesContent">
+						<div class="topbar" act_list></div>
+						<div class="act_list">
+							<div class="list_l">
+								<div class="list_face"><img src="images/maggie.png" height="50px"></div>
+								<div class="list_name">Maggie</div>
+							</div>
+							<div class="list_c">here is the content of activities</div>
+							<!--includes operations like sharing, enrolling or liking it-->
+							<div clss="list_op"></div>
+						</div>
+						<div class="act_list">
+							<div class="list_l">
+								<div class="list_face"><img src="images/berkeley.png" height="50px"></div>
+								<div class="list_name">Berkeley</div>
+							</div>
+							<div class="list_c">Baseball match</div>
+						</div>					
+						<div class="act_list act_last">
+							<div class="list_l">
+								<div class="list_face"><img src="images/John.png" height="50px"></div>
+								<div class="list_name">John</div>
+							</div>
+							<div class="list_c">Movie</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="rooter">
+			</div>
+		</div>
+	</body>
+</html>
